@@ -32,12 +32,12 @@ for x in stride(from: 25, through: 475, by: 50){
     for y in stride(from: 25, through: 475, by: 50) {
         
         // Draw the shapes
-        canvas.drawEllipse(centreX: x, centreY: y, width: 2, height: 2)
+    
         canvas.drawRectangle(centreX: x, centreY: y, width: 50, height: 50)
     }
 }
 
-
+//PUSH
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.

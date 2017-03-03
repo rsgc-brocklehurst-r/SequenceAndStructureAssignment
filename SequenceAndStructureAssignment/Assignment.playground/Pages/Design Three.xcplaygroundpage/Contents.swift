@@ -37,9 +37,37 @@ for x in stride(from: 25, through: 475, by: 50){
     }
 }
 
-//PUSH
+//Circles and squares in middle
+
+canvas.fillColor = Color.black
+canvas.drawShapesWithFill = true
+for z in stride(from: 0, through: 300, by: 75){
+    canvas.drawEllipse(centreX: 250, centreY: 250, width: z, height: z)
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
+
+
+canvas.drawShapesWithFill = true
+for z in stride(from: 0, through: 300, by: 75){
+    canvas.drawEllipse(centreX: 250, centreY: 250, width: z, height: z)
+}
+canvas.drawShapesWithBorders = false
+canvas.fillColor = Color.white
+
+for w in stride(from: 0, through: 210, by: 70) {
+    canvas.drawRectangle(centreX: 250, centreY: 250, width: w, height: w)
+}
+
+canvas.drawLine(fromX: 0, fromY: 500, toX: 50, toY: 400)
+
+/*:
+ ## Template code
+ The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
+ */
+
+
+
 PlaygroundPage.current.liveView = canvas.imageView

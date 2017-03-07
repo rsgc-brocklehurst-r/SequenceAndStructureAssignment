@@ -41,27 +41,39 @@ for x in stride(from: 25, through: 475, by: 50){
 
 canvas.fillColor = Color.black
 canvas.drawShapesWithFill = true
-for z in stride(from: 0, through: 300, by: 75){
-    canvas.drawEllipse(centreX: 250, centreY: 250, width: z, height: z)
+canvas.drawShapesWithBorders = false
+canvas.drawEllipse(centreX: 250, centreY: 250, width: 300, height: 300)
+canvas.fillColor = Color.white
+canvas.drawRectangle(centreX: 250, centreY: 250, width: 212, height: 212)
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 250, centreY: 250, width: 212, height: 212)
+canvas.fillColor = Color.white
+canvas.drawRectangle(centreX: 250, centreY: 250, width: 150, height: 150)
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 250, centreY: 250, width: 150, height: 150)
+canvas.fillColor = Color.white
+canvas.drawRectangle(centreX: 250, centreY: 250, width: 106, height: 106)
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 250, centreY: 250, width: 106, height: 106)
+for v in stride(from: 0, through: 200, by: 50) {
+canvas.drawLine(fromX: v, fromY: 500, toX: v + 50, toY: 400)
 }
+for z in stride(from: 300, through: 500, by: 50) {
+    canvas.drawLine(fromX: z, fromY: 500, toX: z - 50, toY: 400)
+}
+for w in stride(from: 0, through: 200, by: 50) {
+    canvas.drawLine(fromX: w, fromY: 0, toX: w + 50, toY: 100)
+}
+for u in stride(from: 300, through: 500, by: 50) {
+    canvas.drawLine(fromX: u, fromY: 0, toX: u - 50, toY: 100)
+}
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
  */
 
 
-canvas.drawShapesWithFill = true
-for z in stride(from: 0, through: 300, by: 75){
-    canvas.drawEllipse(centreX: 250, centreY: 250, width: z, height: z)
-}
-canvas.drawShapesWithBorders = false
-canvas.fillColor = Color.white
-
-for w in stride(from: 0, through: 210, by: 70) {
-    canvas.drawRectangle(centreX: 250, centreY: 250, width: w, height: w)
-}
-
-canvas.drawLine(fromX: 0, fromY: 500, toX: 50, toY: 400)
 
 /*:
  ## Template code

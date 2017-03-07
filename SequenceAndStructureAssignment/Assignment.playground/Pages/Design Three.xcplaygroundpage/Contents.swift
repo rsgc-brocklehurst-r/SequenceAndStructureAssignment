@@ -55,18 +55,24 @@ canvas.fillColor = Color.white
 canvas.drawRectangle(centreX: 250, centreY: 250, width: 106, height: 106)
 canvas.fillColor = Color.black
 canvas.drawEllipse(centreX: 250, centreY: 250, width: 106, height: 106)
-for v in stride(from: 0, through: 200, by: 50) {
-canvas.drawLine(fromX: v, fromY: 500, toX: v + 50, toY: 400)
+for v in stride(from: 0, through: 500, by: 50) {
+    if v % 500 == 250 {
+        
+    } else {
+    if v > 200 {
+        canvas.drawLine(fromX: v, fromY: 500, toX: v - 50, toY: 400)
+    } else { canvas.drawLine(fromX: v, fromY: 0, toX: v + 50, toY: 100)
 }
-for z in stride(from: 300, through: 500, by: 50) {
-    canvas.drawLine(fromX: z, fromY: 500, toX: z - 50, toY: 400)
 }
-for w in stride(from: 0, through: 200, by: 50) {
-    canvas.drawLine(fromX: w, fromY: 0, toX: w + 50, toY: 100)
 }
-for u in stride(from: 300, through: 500, by: 50) {
-    canvas.drawLine(fromX: u, fromY: 0, toX: u - 50, toY: 100)
+for z in stride(from: 0, through: 500, by: 50) {
+    if z < 250 {
+        canvas.drawLine(fromX: z, fromY: 500, toX: z + 50, toY: 400)
+    } else {
+        canvas.drawLine(fromX: z, fromY: 100, toX: z + 50, toY: 0)
+    }
 }
+
 
 /*:
  ## Template code

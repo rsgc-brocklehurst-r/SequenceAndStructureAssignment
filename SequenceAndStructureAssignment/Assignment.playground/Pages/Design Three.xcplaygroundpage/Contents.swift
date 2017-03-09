@@ -75,7 +75,7 @@ for z in stride(from: 0, through: 500, by: 50) {
     }
 }
 
-// Draw coloured squares and diamonds (more loops)
+// Draw coloured squares and diamonds (more loops, sequence)
 canvas.defaultLineWidth = 5
 for w in stride(from: 100, through: 300, by: 100) {
         canvas.drawLine(fromX: 0, fromY: w, toX: 50, toY: w + 100)
@@ -90,6 +90,7 @@ for u in stride(from: 100, through: 300, by: 100) {
         canvas.drawLine(fromX: 450, fromY: u + 100, toX: 500, toY: u)
     }
 
+// Coloured squares
 for t in stride(from: 100, through: 300, by: 100) {
     var c = random(from: 0, toButNotIncluding: 361)
     canvas.fillColor = Color(hue: c, saturation: 100, brightness: 100, alpha: 50)
@@ -101,6 +102,8 @@ for t in stride(from: 100, through: 300, by: 100) {
     canvas.fillColor = Color(hue: c, saturation: 100, brightness: 100, alpha: 50)
   canvas.drawRectangle(bottomLeftX: 400, bottomLeftY: t, width: 100, height: 100)
 }
+
+canvas.copyToClipboard()
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.

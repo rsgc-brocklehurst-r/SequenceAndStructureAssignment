@@ -37,7 +37,7 @@ for x in stride(from: 25, through: 475, by: 50){
     }
 }
 
-//Circles and squares in middle
+// Circles and squares in middle (sequence)
 
 canvas.fillColor = Color.black
 canvas.drawShapesWithFill = true
@@ -55,6 +55,8 @@ canvas.fillColor = Color.white
 canvas.drawRectangle(centreX: 250, centreY: 250, width: 106, height: 106)
 canvas.fillColor = Color.black
 canvas.drawEllipse(centreX: 250, centreY: 250, width: 106, height: 106)
+
+// Draw lines on top and bottom (loop and if statement)
 for v in stride(from: 0, through: 500, by: 50) {
     if v % 500 == 250 {
         
@@ -73,7 +75,25 @@ for z in stride(from: 0, through: 500, by: 50) {
     }
 }
 
-
+// Draw coloured squares and diamonds (more loops)
+canvas.defaultLineWidth = 5
+for w in stride(from: 100, through: 300, by: 100) {
+        canvas.drawLine(fromX: 0, fromY: w, toX: 50, toY: w + 100)
+        canvas.drawLine(fromX: 50, fromY: w, toX: 100, toY: w + 100)
+        canvas.drawLine(fromX: 400, fromY: w, toX: 450, toY: w + 100)
+        canvas.drawLine(fromX: 450, fromY: w, toX: 500, toY: w + 100)
+}
+for u in stride(from: 100, through: 300, by: 100) {
+        canvas.drawLine(fromX: 0, fromY: u + 100, toX: 50, toY: u)
+        canvas.drawLine(fromX: 50, fromY: u + 100, toX: 100, toY: u)
+        canvas.drawLine(fromX: 400, fromY: u + 100, toX: 450, toY: u)
+        canvas.drawLine(fromX: 450, fromY: u + 100, toX: 500, toY: u)
+    }
+canvas.fillColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 50)
+for t in stride(from: 100, through: 300, by: 100) {
+    canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: t, width: 100, height: 100)
+    canvas.drawRectangle(bottomLeftX: 400, bottomLeftY: t, width: 100, height: 100)
+}
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.

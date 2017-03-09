@@ -89,10 +89,17 @@ for u in stride(from: 100, through: 300, by: 100) {
         canvas.drawLine(fromX: 400, fromY: u + 100, toX: 450, toY: u)
         canvas.drawLine(fromX: 450, fromY: u + 100, toX: 500, toY: u)
     }
-canvas.fillColor = Color(hue: 0, saturation: 0, brightness: 0, alpha: 50)
+
 for t in stride(from: 100, through: 300, by: 100) {
+    var c = random(from: 0, toButNotIncluding: 361)
+    canvas.fillColor = Color(hue: c, saturation: 100, brightness: 100, alpha: 50)
     canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: t, width: 100, height: 100)
-    canvas.drawRectangle(bottomLeftX: 400, bottomLeftY: t, width: 100, height: 100)
+  
+}
+for t in stride(from: 100, through: 300, by: 100) {
+    var c = random(from: 0, toButNotIncluding: 361)
+    canvas.fillColor = Color(hue: c, saturation: 100, brightness: 100, alpha: 50)
+  canvas.drawRectangle(bottomLeftX: 400, bottomLeftY: t, width: 100, height: 100)
 }
 /*:
  ## Template code
